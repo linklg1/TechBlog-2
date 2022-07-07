@@ -21,7 +21,7 @@ let handleError=function(err){
 
 if (username && password) {
   const response = await fetch('/api/user/login', {
-    method: "post",
+    method: "POST",
     body: JSON.stringify({
       username: username,
       password: password

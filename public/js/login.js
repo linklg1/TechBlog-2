@@ -20,7 +20,7 @@ let handleError=function(err){
 
 
 if (username && password) {
-  let response = await fetch('/', {
+  let response = await fetch('https://damp-reef-13174.herokuapp.com/', {
     method: "POST",
     body: JSON.stringify({
       username: username,

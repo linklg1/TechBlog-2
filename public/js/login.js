@@ -19,24 +19,26 @@ let handleError=function(err){
 };
 
 
-if (username && password) {
-  let response = await fetch('/api/user/login', {
-    method: "POST",
-    body: JSON.stringify({
-      username: username,
-      password: password
-    }),
+const user = await axios.post("https://damp-reef-13174.herokuapp.com/api/user/login", {username:username, password:password})
+console.log(user);
+// if (username && password) {
+//   let response = await fetch('/api/user/login', {
+//     method: "POST",
+//     body: JSON.stringify({
+//       username: username,
+//       password: password
+//     }),
 
-    headers: { "Content-Type": "application/json" }
-  }).catch(handleError);
+//     headers: { "Content-Type": "application/json" }
+//   }).catch(handleError);
 
-  if (response.ok) {
-    document.location.replace('/');
-  } else {
-    alert(response.statusText);
-  }
+//   if (response.ok) {
+//     document.location.replace('/');
+//   } else {
+//     alert(response.statusText);
+//   }
   
-}
+// }
 };
 
 document

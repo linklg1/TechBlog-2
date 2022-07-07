@@ -1,4 +1,3 @@
-
 console.log('we are logging in');
 
 async function loginFormHandler(event) {

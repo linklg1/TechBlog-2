@@ -1,4 +1,3 @@
-
 async function commentFormHandler(event) {
   event.preventDefault();
 console.log('button clicked')

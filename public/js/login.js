@@ -18,9 +18,13 @@ let handleError=function(err){
   }));
 };
 
-
-const user = await axios.post("https://damp-reef-13174.herokuapp.com/api/user/login", {username:username, password:password})
-console.log(user);
+try {
+  const user = await axios.post("https://damp-reef-13174.herokuapp.com/api/user/login", {username:username, password:password})
+  console.log(user);
+  
+} catch (error) {
+  console.log(error);
+}
 // if (username && password) {
 //   let response = await fetch('/api/user/login', {
 //     method: "POST",

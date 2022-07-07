@@ -19,7 +19,7 @@ let handleError=function(err){
 };
 
 try {
-  const user = await axios.post("https://damp-reef-13174.herokuapp.com/api/user/login", {username:username, password:password})
+  const user = await axios.post("/api/user", {username:username, password:password})
   console.log(user);
   
 } catch (error) {
